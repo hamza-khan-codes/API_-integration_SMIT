@@ -1,0 +1,314 @@
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Inter, Arial, sans-serif;
+            background: #0b0d12;
+            color: #f5f7fa;
+            min-height: 100vh;
+        }
+
+        /* ================= HEADER ================= */
+
+        header {
+            border-bottom: 1px solid #1d2129;
+            background: #0d1016;
+        }
+
+        .header-inner {
+            max-width: 1400px;
+            margin: auto;
+            padding: 24px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .brand h1 {
+            font-size: 24px;
+            letter-spacing: -0.5px;
+        }
+
+        .brand p {
+            margin-top: 5px;
+            color: #8b93a1;
+            font-size: 14px;
+        }
+
+        /* ================= SEARCH ================= */
+
+        .search-wrapper {
+            position: relative;
+            width: 380px;
+        }
+
+        .search-wrapper svg {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 19px;
+            height: 19px;
+            color: #737b89;
+        }
+
+        #searchInput {
+            width: 100%;
+            height: 46px;
+            padding: 0 18px 0 45px;
+
+            border: 1px solid #282e38;
+            border-radius: 10px;
+
+            background: #151920;
+            color: #fff;
+
+            outline: none;
+            font-size: 14px;
+
+            transition: 0.2s;
+        }
+
+        #searchInput::placeholder {
+            color: #69717e;
+        }
+
+        #searchInput:focus {
+            border-color: #6366f1;
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.12);
+        }
+
+        /* ================= MAIN ================= */
+
+        main {
+            max-width: 1400px;
+            margin: auto;
+            padding: 30px;
+        }
+
+        .toolbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 24px;
+        }
+
+        .result-count {
+            color: #8b93a1;
+            font-size: 14px;
+        }
+
+        .result-count strong {
+            color: #fff;
+        }
+
+        /* ================= USER GRID ================= */
+
+        #users {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        /* ================= CARD ================= */
+
+        .user-card {
+            background: #11141a;
+            border: 1px solid #20252e;
+            border-radius: 14px;
+            padding: 20px;
+
+            transition:
+                transform 0.2s ease,
+                border-color 0.2s ease,
+                background 0.2s ease;
+        }
+
+        .user-card:hover {
+            transform: translateY(-3px);
+            border-color: #343b48;
+            background: #141820;
+        }
+
+        .card-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 18px;
+        }
+
+        /* ================= AVATAR ================= */
+
+        .avatar {
+            width: 48px;
+            height: 48px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 12px;
+
+            background: linear-gradient(
+                135deg,
+                #6366f1,
+                #8b5cf6
+            );
+
+            color: white;
+            font-weight: 700;
+            font-size: 17px;
+        }
+
+        .user-id {
+            color: #69717e;
+            font-size: 12px;
+        }
+
+        /* ================= USER INFO ================= */
+
+        .user-name {
+            font-size: 17px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .username {
+            color: #737b89;
+            font-size: 13px;
+            margin-bottom: 18px;
+        }
+
+        .info {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+
+            color: #9aa2af;
+            font-size: 13px;
+
+            margin-bottom: 10px;
+
+            overflow: hidden;
+        }
+
+        .info span {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .info svg {
+            width: 16px;
+            height: 16px;
+            flex-shrink: 0;
+            color: #636b78;
+        }
+
+        /* ================= DIVIDER ================= */
+
+        .divider {
+            height: 1px;
+            background: #20252e;
+            margin: 17px 0;
+        }
+
+        /* ================= BOTTOM ================= */
+
+        .card-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .role {
+            padding: 5px 9px;
+            border-radius: 6px;
+
+            background: #1d2230;
+            color: #aeb6ff;
+
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .status {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+
+            font-size: 12px;
+            color: #7ed99a;
+        }
+
+        .status-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #45c46a;
+        }
+
+        .status.inactive {
+            color: #e18484;
+        }
+
+        .status.inactive .status-dot {
+            background: #d75a5a;
+        }
+
+        /* ================= EMPTY ================= */
+
+        .empty {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 80px 20px;
+            color: #737b89;
+        }
+
+        .empty h2 {
+            color: #dce0e6;
+            margin-bottom: 8px;
+        }
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 1100px) {
+            #users {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 800px) {
+            .header-inner {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .search-wrapper {
+                width: 100%;
+            }
+
+            #users {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 550px) {
+            main {
+                padding: 20px 15px;
+            }
+
+            .header-inner {
+                padding: 20px 15px;
+            }
+
+            #users {
+                grid-template-columns: 1fr;
+            }
+        }
